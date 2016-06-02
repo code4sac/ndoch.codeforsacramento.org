@@ -1,10 +1,10 @@
 {% assign consumer = site.data.data-consumers[include.id] %}
 
-<div class="usa-width-one-third ood-gallery-item ood-gallery-item-data-consumer">
+<div class="usa-width-one-half ood-gallery-item ood-gallery-item-data-consumer">
   <article>
-    <div class="ood-gallery-item-image-container"
+    <!-- <div class="ood-gallery-item-image-container"
          style="background-image: url('{{ consumer.image_filename | prepend: "img/data-consumers/" | prepend: site.baseurl }}'); position: relative">
-    </div>
+    </div> -->
 
     <div class="ood-gallery-item-content">
       <header>
@@ -12,11 +12,7 @@
       </header>
       <p>{{ consumer.summary }}</p>
       <footer>
-        {% if consumer.call_to_action %}
-        <a href="{{ consumer.url }}" class="usa-button usa-button-secondary">Build something!</a>
-        {% else %}
         <a href="{{ consumer.url }}" class="usa-button">Learn more</a>
-        {% endif %}
       </footer>
     </div>
   </article>
