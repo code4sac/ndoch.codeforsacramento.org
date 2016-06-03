@@ -1,0 +1,11 @@
+<div class="usa-grid">
+  <h3>Geo Data</h3>
+
+  <p>GeoJSON boundaries for Priority Neighborhoods</p>
+</div>
+<div class="usa-grid">
+  {% for g in site.data.geographies %}
+    {% assign id = g[0] %}
+    {% include_relative index_includes/geography.html id=id %}
+  {% endfor %}
+</div>

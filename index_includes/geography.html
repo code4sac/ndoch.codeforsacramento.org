@@ -1,0 +1,24 @@
+{% assign geography = site.data.geographies[include.id] %}
+
+<div class="usa-accordion-bordered">
+  <ul class="usa-unstyled-list">
+    <li>
+      <section class="ood-scenario">
+        <button class="usa-button-unstyled" aria-expanded="false"
+                aria-controls="collapsible-scenario-{{include.id}}">
+          {{ geography.name }}
+          <span class="ood-narrow-hide">— {{ geography.description }}</span>
+        </button>
+
+        <div id="collapsible-scenario-{{include.id}}" aria-hidden="true"
+             class="usa-accordion-content">
+
+          <h4 class="ood-wide-hide">{{ geography.description }}.</h4>
+
+          <script src="{{ geography.map }}"></script>
+
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
