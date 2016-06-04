@@ -1,11 +1,14 @@
 <div class="usa-grid">
   <h3>Geo Data</h3>
-
-  <p>GeoJSON boundaries for Priority Neighborhoods</p>
+  <h4>GeoJSON boundaries for Priority Neighborhoods</h4>
 </div>
 <div class="usa-grid">
   {% for g in site.data.geographies %}
     {% assign id = g[0] %}
     {% include_relative index_includes/geography.html id=id %}
   {% endfor %}
+</div>
+<div class="usa-grid">
+  <p><a href="https://github.com/code4sac/ndoch-2016/tree/master/geoJSON">View all GeoJSON files on GitHub</a></p>
+  <p><a href="https://github.com/code4sac/ndoch-2016/tree/master/Shapefiles">View all ESRI shapefiles on GitHub</a></p>
 </div>
