@@ -7,15 +7,14 @@
         <button class="usa-button-unstyled" aria-expanded="false"
                 aria-controls="collapsible-scenario-{{include.id}}">
           {{ geography.name }}
-          <span class="ood-narrow-hide">— {{ geography.description }}</span>
         </button>
 
         <div id="collapsible-scenario-{{include.id}}" aria-hidden="true"
              class="usa-accordion-content">
 
-          <h4 class="ood-wide-hide">{{ geography.description }}.</h4>
+          <h4 class="ood-wide-hide">{{ geography.description }}</h4>
 
-          <a href="{{ geography.info }}" class="usa-button">Learn more</a>
+          <p><a href="{{ geography.info }}" class="usa-button">Learn more</a></p>
 
           <script src="{{ geography.map }}"></script>
 
